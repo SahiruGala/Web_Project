@@ -33,4 +33,5 @@ if [ "$STATUS_CODE" = "200" ]; then
 	echo "Web server is responding the status code 200"
 else
 	echo "Web server is not responding the status code 200"
+	echo "Server not returning code 200, please take a look. " | mail -v -s "Server status report" rowsahiru@gmail.com
 fi
