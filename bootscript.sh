@@ -31,6 +31,7 @@ STATUS_CODE=$(curl --write-out "%{http_code}\n" "http://localhost:80" --output o
 echo "Response Code from web server: $STATUS_CODE"
 if [ "$STATUS_CODE" = "200" ]; then
 	echo "Web server is responding the status code 200"
+	echo "Server is responding as expected. " | mail -v -s "Server status report" rowsahiru@gmail.com
 else
 	echo "Web server is not responding the status code 200"
 	echo "Server not returning code 200, please take a look. " | mail -v -s "Server status report" rowsahiru@gmail.com
