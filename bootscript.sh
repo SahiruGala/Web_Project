@@ -14,9 +14,9 @@ echo "Server UNIX Time: $LOCAL_TIME"
 
 #Check if local and world times are equal or not
 if [ "$WORLD_TIME" = "$LOCAL_TIME" ]; then
-    echo "Fetched Time and Server TIme are equal."
+    echo "Fetched Time and Server Time are equal."
 else
-    echo "Fetched Time and Server TIme are not equal."
+    echo "Fetched Time and Server Time are not equal."
 fi
 
 #Update index.html with world time and local time
