@@ -27,7 +27,7 @@ sed -i "/Local time/c\Local time: '$DISPLAY_LOCAL_TIME'" /usr/share/nginx/html/i
 
 
 #Checking response code of the server
-STATUS_CODE=$(curl --write-out "%{http_code}\n" "http://localhost:80" --output output.txt --silent)
+STATUS_CODE=$(sudo curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8080)
 echo "Response Code from web server: $STATUS_CODE"
 if [ "$STATUS_CODE" = "200" ]; then
 	echo "Web server is responding the status code 200"
