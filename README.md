@@ -19,6 +19,6 @@ docker run -it --rm -d -p 8081:80 --name website2 webproject
 docker run -it --rm -d -p 8082:80 --name website3 webproject
 
 # to stop a running servers
-sudo docker website
+sudo docker stop website
 
 # read Documentation for full aws walkthrough
